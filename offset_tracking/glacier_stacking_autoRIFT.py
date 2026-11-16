@@ -289,7 +289,7 @@ class glacier_autoRIFT:
             # Coarse search
             SubPixFlag = False
             ChipSizeXC = ChipSizeUniX[i]
-            ChipSizeYC = np.float32(np.round(ChipSizeXC*self.ScaleChipSizeY/2)*2)
+            ChipSizeYC = np.float32(np.round(ChipSizeXC*self.ScaleChipSizeY/4)*4)
             # Change
             SearchLimitY0C = np.float32(np.round(SearchLimitY0C*self.ScaleChipSizeY))
             
@@ -338,7 +338,7 @@ class glacier_autoRIFT:
             # Fine Search
             SubPixFlag = True
             ChipSizeXF = ChipSizeUniX[i]
-            ChipSizeYF = np.float32(np.round(ChipSizeXF*self.ScaleChipSizeY/2)*2)
+            ChipSizeYF = np.float32(np.round(ChipSizeXF*self.ScaleChipSizeY/4)*4)
             SearchLimitY0 = np.float32(np.round(SearchLimitY0*self.ScaleChipSizeY))
 
             print("Starting Fine Search")
